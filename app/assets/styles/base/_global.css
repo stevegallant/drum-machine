@@ -1,0 +1,10 @@
+body {
+  background-color: lightgrey;
+  font-family: 'Righteous', cursive;
+}
+
+.button-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+}

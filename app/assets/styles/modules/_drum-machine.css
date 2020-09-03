@@ -1,0 +1,15 @@
+#drum-machine {
+  /* display: flex; */
+  width: 300px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 4px solid black;
+  color: #fffcf2;
+  background-color: #403d39;
+
+  @mixin atMedium {
+    display: flex;
+    width: 700px;
+    margin-top: 60px;
+  }
+}

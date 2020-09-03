@@ -1,0 +1,6 @@
+.controls {
+
+  &__label {
+    font-weight: 200;
+  }
+}

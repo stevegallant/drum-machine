@@ -1,0 +1,7 @@
+@import './base/_global';
+@import './base/_mixins';
+@import './modules/_drum-machine';
+@import './modules/_drum-pad';
+@import './modules/_controls';
+
+/* Color pallette from coolors.co: https://coolors.co/fffcf2-ccc5b9-403d39-252422-eb5e28 */

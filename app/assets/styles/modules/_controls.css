@@ -1,6 +1,21 @@
+@font-face {
+  font-family: "Digital Readout Upright";
+  src: url('/assets/styles/fonts/DIGIRU__.ttf');
+}
+
 .controls {
 
   &__label {
     font-weight: 200;
+  }
+
+  &__display {
+    width: 175px;
+    padding: 6px;
+    text-align: center;
+    font-family: "Digital Readout Upright", monospace;
+    font-size: 1.5rem;
+    background-color: black;
+    color: green;
   }
 }

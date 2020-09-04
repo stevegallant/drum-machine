@@ -1,0 +1,11 @@
+.btn-grid {
+  display: grid;
+  margin: 20px auto 0;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+
+  @mixin atMedium {
+    display: inline-grid;
+    margin: 0;
+  }
+}

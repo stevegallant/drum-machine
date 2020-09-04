@@ -1,6 +1,7 @@
 @import './base/_global';
 @import './base/_mixins';
 @import './modules/_drum-machine';
+@import './modules/_btn-grid';
 @import './modules/_drum-pad';
 @import './modules/_controls';
 

@@ -10,10 +10,10 @@ class Drumpads extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', e => this.handleKeyPress(e));
+    document.addEventListener('keyup', e => this.handleKeyUp(e));
   }
 
   handleClick(e) {
-    console.log("pad clicked " + e.target.innerText);
     let audio = document.getElementById(e.target.innerText);
     if (audio.paused) {
       audio.play();
@@ -25,8 +25,10 @@ class Drumpads extends React.Component {
   }
 
   handleKeyPress(e) {
-    console.log('key press ' + String.fromCharCode(e.keyCode));
+    // console.log('key press ' + String.fromCharCode(e.keyCode));
     let audio = document.getElementById(String.fromCharCode(e.keyCode));
+    console.log('selected element is ' + audio);
+    audio.closest(".drum-pad").classList.add("drum-pad--pressed");
     if (audio.paused) {
       audio.play();
     } else {
@@ -34,6 +36,11 @@ class Drumpads extends React.Component {
       audio.currentTime = 0;
       audio.play();
     };
+  }
+
+  handleKeyUp(e) {
+    let audio = document.getElementById(String.fromCharCode(e.keyCode));
+    audio.closest(".drum-pad").classList.remove("drum-pad--pressed");
   }
 
   render() {

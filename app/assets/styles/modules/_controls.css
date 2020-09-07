@@ -4,8 +4,13 @@
 }
 
 .controls {
+  margin-right: 20px;
+  padding: 4px 20px;
+  border: 2px solid #ccc5b9;
+  border-radius: 10px;
 
   &__label {
+    margin-top: 0;
     font-weight: 200;
   }
 

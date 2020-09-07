@@ -23,12 +23,13 @@ class Drumpads extends React.Component {
       audio.currentTime = 0;
       audio.play();
     };
-    this.props.updateDisplay(e.target.title);
+    this.props.updateDisplay(e.target.id);
   }
 
   handleKeyPress(e) {
     let audio = document.getElementById(String.fromCharCode(e.keyCode));
-    audio.closest(".drum-pad").classList.add("drum-pad--pressed");
+    let pad = audio.closest(".drum-pad");
+    pad.classList.add("drum-pad--pressed");
     if (audio.paused) {
       audio.play();
     } else {
@@ -36,7 +37,7 @@ class Drumpads extends React.Component {
       audio.currentTime = 0;
       audio.play();
     };
-    this.props.updateDisplay(e.target.title);
+    this.props.updateDisplay(pad.id);
   }
 
   handleKeyUp(e) {
@@ -48,7 +49,7 @@ class Drumpads extends React.Component {
     return (
       <div className="btn-grid">
         {Bank1.map((value, index) => {
-          return <Pad key={index} id={value.id} src={value.src} title={value.display} onClick={this.handleClick}/>
+          return <Pad key={index} keyboard={value.keyboard} src={value.src} id={value.display} onClick={this.handleClick}/>
         })}
       </div>
     );
@@ -59,47 +60,47 @@ class Drumpads extends React.Component {
 
 const Bank1 = [
   {
-    id: 'Q',
+    keyboard: 'Q',
     display: 'HI-HAT SPLASH',
     src: './assets/audio/hh-splash.mp3'
   },
   {
-    id: 'W',
+    keyboard: 'W',
     display: 'HI-HAT CLOSED',
     src: './assets/audio/hh-closed.mp3'
   },
   {
-    id: 'E',
+    keyboard: 'E',
     display: 'MORE COWBELL',
     src: './assets/audio/cowbell.mp3'
   },
   {
-    id: 'A',
+    keyboard: 'A',
     display: 'HIGH TOM-TOM',
     src: './assets/audio/hi-tom.mp3'
   },
   {
-    id: 'S',
+    keyboard: 'S',
     display: 'MID TOM-TOM',
     src: './assets/audio/mid-tom.mp3'
   },
   {
-    id: 'D',
+    keyboard: 'D',
     display: 'LOW TOM-TOM',
     src: './assets/audio/low-tom.mp3'
   },
   {
-    id: 'Z',
+    keyboard: 'Z',
     display: 'SNARE',
     src: './assets/audio/snare.mp3'
   },
   {
-    id: 'X',
+    keyboard: 'X',
     display: 'BASS',
     src: './assets/audio/bass.mp3'
   },
   {
-    id: 'C',
+    keyboard: 'C',
     display: 'CRASH CYMBAL',
     src: './assets/audio/crash.mp3'
   },

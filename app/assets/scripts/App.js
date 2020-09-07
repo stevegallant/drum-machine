@@ -10,7 +10,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayText: 'TEST123'
+      displayText: 'TEST123',
+      volume: '.2'
     };
     this.updateDisplay = this.updateDisplay.bind(this);
   }

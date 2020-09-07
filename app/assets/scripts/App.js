@@ -4,20 +4,26 @@ import ReactDOM from 'react-dom';
 
 // My components
 import Drumpads from './modules/Drumpads';
+import Controls from './modules/Controls';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      displayText: 'TEST123'
+    };
+    this.updateDisplay = this.updateDisplay.bind(this);
+  }
+
+  updateDisplay(text) {
+    this.setState({displayText: text});
   }
 
   render() {
     return (
       <>
-        <div className="controls">
-          <h1 className="controls__label">Super Duper Drum Machine</h1>
-          <div id="display" className="controls__display">Display</div>
-        </div>
-        <Drumpads />
+        <Controls displayText={this.state.displayText} />
+        <Drumpads updateDisplay={this.updateDisplay} />
       </>
     );
   }

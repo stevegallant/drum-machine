@@ -10,9 +10,91 @@
   border-radius: 10px;
 
   &__label {
+    display: block;
     margin-top: 0;
     font-weight: 200;
   }
+
+  &__vol {
+    -webkit-appearance: none;
+    width: 175px;
+    background: transparent;
+  }
+
+  &__vol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 36px;
+    height: 18px;
+    margin-top: -7px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: linear-gradient(.25turn, white, #403d39, white);
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    cursor: pointer;
+  }
+
+  &__vol::-moz-range-thumb {
+    /* copy from above when done styling for Chrome */
+    -webkit-appearance: none;
+    width: 36px;
+    height: 18px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: linear-gradient(.25turn, white, #403d39, white);
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    cursor: pointer;
+  }
+
+  &__vol::-ms-thumb {
+    /* copy from above when done styling for Chrome */
+    -webkit-appearance: none;
+    width: 36px;
+    height: 18px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: linear-gradient(.25turn, white, #403d39, white);
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    cursor: pointer;
+  }
+
+  &__vol:focus {
+    outline: none;
+  }
+  &__vol::-ms-track {
+    width: 175px;
+    cursor: pointer;
+    /* background: transparent; */
+    border-color: transparent;
+    color: transparent;
+  }
+  &__vol::-webkit-slider-runnable-track {
+    height: 6px;
+    margin: 10px 0;
+    background: grey;
+    /* drop-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d; */
+    border: .02px solid #010101;
+    border-radius: 1.3px;
+    cursor: pointer;
+  }
+  &__vol::-moz-range-track {
+    height: 6px;
+    margin: 10px 0;
+    background: grey;
+    /* drop-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d; */
+    border: .02px solid #010101;
+    border-radius: 1.3px;
+    cursor: pointer;
+  }
+  &__vol::-ms-track {
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+
+
 
   &__display {
     width: 175px;

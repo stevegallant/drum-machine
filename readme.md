@@ -1,11 +1,12 @@
 # Drum Machine App
 
 ## General info
-React JS app emulating a simple drum machine.
+React JavaScript app emulating a simple drum machine.
 
 ## Technologies
-Project is created with:
+Project was created with:
 * HTML
-* CSS
+* CSS (SASS) using BEM naming
 * JavaScript
 * React
+* npm + webpack build workflow

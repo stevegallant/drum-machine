@@ -10,6 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      powerOn: false,
       displayText: 'TEST123',
       volume: '.2'
     };
@@ -27,7 +28,7 @@ class App extends React.Component {
         <Drumpads updateDisplay={this.updateDisplay} />
       </>
     );
-  }
+  } 
 
 
 }

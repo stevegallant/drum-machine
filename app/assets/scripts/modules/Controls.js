@@ -9,10 +9,10 @@ class Controls extends React.Component {
     return (
       <div className="controls">
         <h1 className="controls__label">Super Duper Drum Machine</h1>
-        <label htmlFor="" className="controls__label">Power</label>
-        <label className="controls__powerToggle">
+        <label htmlFor="powerToggle" className="controls__label">Power</label>
+        <label id="powerToggle" className="controls__powerToggle">
           <input type="checkbox"/>
-          <span className="controls__powerToggle--slider"></span>
+          <span className="controls__powerToggleSlider"></span>
         </label>
         <label htmlFor="vol" className="controls__label">Volume</label>
         <input className="controls__vol" type="range" id="vol" name="vol" min="0" max="1" step=".1" value=".5" />

@@ -147,6 +147,7 @@
 
   &__display {
     width: 175px;
+    height: 24px;
     padding: 6px;
     text-align: center;
     font-family: "Digital Readout Upright", monospace;

@@ -15,34 +15,40 @@ class Drumpads extends React.Component {
   }
 
   handleClick(e) {
-    let audio = document.getElementById(e.target.innerText);
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-      audio.currentTime = 0;
-      audio.play();
-    };
-    this.props.updateDisplay(e.target.id);
+    if (this.props.poweredOn) {
+      let audio = document.getElementById(e.target.innerText);
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+      };
+      this.props.updateDisplay(e.target.id);
+    }
   }
 
   handleKeyPress(e) {
-    let audio = document.getElementById(String.fromCharCode(e.keyCode));
-    let pad = audio.closest(".drum-pad");
-    pad.classList.add("drum-pad--pressed");
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-      audio.currentTime = 0;
-      audio.play();
-    };
-    this.props.updateDisplay(pad.id);
+    if (this.props.poweredOn) {
+      let audio = document.getElementById(String.fromCharCode(e.keyCode));
+      let pad = audio.closest(".drum-pad");
+      pad.classList.add("drum-pad--pressed");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+      };
+      this.props.updateDisplay(pad.id);
+    }    
   }
 
   handleKeyUp(e) {
-    let audio = document.getElementById(String.fromCharCode(e.keyCode));
-    audio.closest(".drum-pad").classList.remove("drum-pad--pressed");
+    if (this.props.poweredOn) {
+      let audio = document.getElementById(String.fromCharCode(e.keyCode));
+      audio.closest(".drum-pad").classList.remove("drum-pad--pressed");
+    }    
   }
 
   render() {

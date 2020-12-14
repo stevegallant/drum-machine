@@ -10,11 +10,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      powerOn: false,
-      displayText: 'TEST123',
+      poweredOn: false,
+      displayText: 'READY',
       volume: '.2'
     };
+    this.togglePower = this.togglePower.bind(this);
     this.updateDisplay = this.updateDisplay.bind(this);
+  }
+
+  togglePower() {
+    this.setState({poweredOn: !this.state.poweredOn});
   }
 
   updateDisplay(text) {
@@ -24,8 +29,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Controls displayText={this.state.displayText} />
-        <Drumpads updateDisplay={this.updateDisplay} />
+        <Controls togglePower={this.togglePower} poweredOn={this.state.poweredOn} displayText={this.state.displayText} />
+        <Drumpads poweredOn={this.state.poweredOn} updateDisplay={this.updateDisplay} />
       </>
     );
   } 

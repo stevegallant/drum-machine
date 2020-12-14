@@ -28,17 +28,15 @@
       height: 0;
     }
 
-    input:checked + .controls__powerToggleSlider {
-      background-color: #2196F3;
-    }
-
-    input:focus + .controls__powerToggleSlider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-
     input:checked + .controls__powerToggleSlider:before {
+      background-color: #abff00;
+      box-shadow: 1px 1px 2px black,
+        inset #304701 1px 1px, 
+        inset -1px -1px 2px 2px #89ff00, 
+        1px 1px 4px #89ff00;
       transform: translateX(16px);
     }
+    
   }
 
   &__powerToggleSlider {
@@ -48,18 +46,19 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: gray;
     border-radius: 20px;
     transition: .4s;
 
     &:before {
       position: absolute;
       content: '';
-      width: 16px;
-      height: 16px;
+      width: 6px;
+      height: 6px;
       left: 2px;
       bottom: 2px;
-      background-color: white;
+      background-color: darkgreen;
+      border: 5px solid #646362;
       border-radius: 50%;
       transition: .4s;
     }

@@ -4,7 +4,7 @@
 }
 
 .controls {
-  margin-right: 20px;
+  margin: 0 auto;
   padding: 4px 20px;
   border: 2px solid #ccc5b9;
   border-radius: 10px;
@@ -67,6 +67,7 @@
   &__vol {
     -webkit-appearance: none;
     width: 175px;
+    margin-bottom: 20px;
     background: transparent;
   }
 
@@ -112,7 +113,6 @@
   &__vol::-ms-track {
     width: 175px;
     cursor: pointer;
-    /* background: transparent; */
     border-color: transparent;
     color: transparent;
   }
@@ -120,7 +120,6 @@
     height: 6px;
     margin: 10px 0;
     background: grey;
-    /* drop-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d; */
     border: .02px solid #010101;
     border-radius: 1.3px;
     cursor: pointer;
@@ -129,7 +128,6 @@
     height: 6px;
     margin: 10px 0;
     background: grey;
-    /* drop-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d; */
     border: .02px solid #010101;
     border-radius: 1.3px;
     cursor: pointer;
@@ -143,11 +141,10 @@
     color: transparent;
   }
 
-
-
   &__display {
     width: 175px;
     height: 24px;
+    margin-bottom: 20px;
     padding: 6px;
     text-align: center;
     font-family: "Digital Readout Upright", monospace;
@@ -155,4 +152,9 @@
     background-color: black;
     color: green;
   }
+
+  @mixin atMedium {
+    margin-right: 20px;
+  }
+
 }

@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      poweredOn: false,
+      poweredOn: true,
       displayText: 'READY',
       volume: '.02'
     };

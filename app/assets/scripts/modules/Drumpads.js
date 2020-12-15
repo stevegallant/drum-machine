@@ -55,14 +55,12 @@ class Drumpads extends React.Component {
     return (
       <div className="btn-grid">
         {Bank1.map((value, index) => {
-          return <Pad key={index} keyboard={value.keyboard} src={value.src} id={value.display} onClick={this.handleClick}/>
+          return <Pad key={index} keyboard={value.keyboard} src={value.src} id={value.display} onMouseDown={this.handleClick} />
         })}
       </div>
     );
   }
 };
-
-
 
 const Bank1 = [
   {

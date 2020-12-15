@@ -11,7 +11,7 @@ function Controls(props) {
         <span className="controls__powerToggleSlider"></span>
       </label>
       <label htmlFor="vol" className="controls__label">Volume</label>
-      <input className="controls__vol" type="range" id="vol" name="vol" min="0" max="1" step=".1" value=".5" />
+      <input className="controls__vol" type="range" id="vol" name="vol" onChange={props.adjustVolume} min="0" max="1" step=".01" defaultValue=".5" />
       <div id="display" className="controls__display">{props.poweredOn ? props.displayText : ' '}</div>
     </div>
   );

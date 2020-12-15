@@ -44,6 +44,7 @@ class RunAfterCompile {
     compiler.hooks.done.tap('Copy images', () => {
       fse.copySync('./app/assets/img', './docs/assets/img');
       fse.copySync('./app/assets/fonts', './docs/assets/fonts');
+      fse.copySync('./app/assets/audio', './docs/assets/audio');
     })
   };
 }

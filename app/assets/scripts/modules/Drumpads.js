@@ -66,47 +66,47 @@ const Bank1 = [
   {
     keyboard: 'Q',
     display: 'HI-HAT SPLASH',
-    src: './assets/audio/hh-splash.mp3'
+    src: 'assets/audio/hh-splash.mp3'
   },
   {
     keyboard: 'W',
     display: 'HI-HAT CLOSED',
-    src: './assets/audio/hh-closed.mp3'
+    src: 'assets/audio/hh-closed.mp3'
   },
   {
     keyboard: 'E',
     display: 'MORE COWBELL',
-    src: './assets/audio/cowbell.mp3'
+    src: 'assets/audio/cowbell.mp3'
   },
   {
     keyboard: 'A',
     display: 'HIGH TOM-TOM',
-    src: './assets/audio/hi-tom.mp3'
+    src: 'assets/audio/hi-tom.mp3'
   },
   {
     keyboard: 'S',
     display: 'MID TOM-TOM',
-    src: './assets/audio/mid-tom.mp3'
+    src: 'assets/audio/mid-tom.mp3'
   },
   {
     keyboard: 'D',
     display: 'LOW TOM-TOM',
-    src: './assets/audio/low-tom.mp3'
+    src: 'assets/audio/low-tom.mp3'
   },
   {
     keyboard: 'Z',
     display: 'SNARE',
-    src: './assets/audio/snare.mp3'
+    src: 'assets/audio/snare.mp3'
   },
   {
     keyboard: 'X',
     display: 'BASS',
-    src: './assets/audio/bass.mp3'
+    src: 'assets/audio/bass.mp3'
   },
   {
     keyboard: 'C',
     display: 'CRASH CYMBAL',
-    src: './assets/audio/crash.mp3'
+    src: 'assets/audio/crash.mp3'
   },
 ];
 
